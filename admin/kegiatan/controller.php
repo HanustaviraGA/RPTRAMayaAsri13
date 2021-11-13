@@ -33,7 +33,7 @@
             $ubah_judul = mysqli_real_escape_string($koneksi, $judul);
             $ubah_deskripsi = mysqli_real_escape_string($koneksi, $deskripsi);
             if(isset($_FILES["gambar"]) && !empty($_FILES["gambar"]["name"])){
-                $filename = "../../kegiatan/img/".$data['old_img'];
+                $filename = '../../kegiatan/img/'.$data['old_img'];
                 if(file_exists($filename)){
                     unlink($filename);
                 }
@@ -51,7 +51,7 @@
             }
             break;
         case 'hapus' :
-            $filename = "../../kegiatan/img/".$data['img'];
+            $filename = '../../kegiatan/img/'.$data['img'];
 
             if(file_exists($filename)){
                 unlink($filename);

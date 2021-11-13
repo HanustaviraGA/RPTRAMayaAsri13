@@ -24,7 +24,7 @@
                 $id_struktur = $data['id_struktur'];
                 $ubah_nama = mysqli_real_escape_string($koneksi, $nama);
                 if(isset($_FILES["gambar"]) && !empty($_FILES["gambar"]["name"])){
-                    $filename = "../../tentang_kami/img_struktur/".$data['old_img'];
+                    $filename = '../../tentang_kami/img_struktur/'.$data['old_img'];
                     if(file_exists($filename)){
                         unlink($filename);
                     }
@@ -43,7 +43,7 @@
                 }
                 break;
         case 'hapus' :
-            $filename = "../../tentang_kami/img_struktur/".$data['img'];
+            $filename = '../../tentang_kami/img_struktur/'.$data['img'];
 
             if(file_exists($filename)){
                 unlink($filename);
